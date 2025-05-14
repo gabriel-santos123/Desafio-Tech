@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REset</title>
+    <link rel="icon" type="image/png" href="RE.png">
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -26,7 +27,8 @@
 <body>
     <header>
         <nav>
-            <h1>REset</h1>
+            <img src="RE.png" alt="Logo REset" class="logo-header">
+            <h1 style="display:inline; vertical-align:middle;">REset</h1>
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -46,27 +48,27 @@
         </section>
         <section id="sobre">
             <h2>Sobre Nós</h2>
-            <p>Somos uma equipe apaixonada por tecnologia, focada em entregar resultados de alto impacto para nossos clientes.</p>
+            <p>Somos uma equipe dedicada à reciclagem e ao descarte correto do lixo, promovendo sustentabilidade e consciência ambiental.</p>
             <ul>
-                <li>Missão: Inovar sempre</li>
-                <li>Visão: Ser referência no mercado</li>
-                <li>Valores: Ética, compromisso e criatividade</li>
+                <li>Missão: Inovar sempre em prol do meio ambiente</li>
+                <li>Visão: Ser referência em reciclagem e sustentabilidade</li>
+                <li>Valores: Ética, compromisso, criatividade e respeito à natureza</li>
             </ul>
         </section>
         <section id="servicos">
             <h2>Serviços</h2>
             <div class="servicos-lista">
                 <div class="servico">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites modernos, responsivos e otimizados para SEO.</p>
+                    <h3>Coleta Seletiva</h3>
+                    <p>Recolhimento de resíduos recicláveis em pontos estratégicos.</p>
                 </div>
                 <div class="servico">
-                    <h3>Design UI/UX</h3>
-                    <p>Experiências digitais intuitivas e atraentes.</p>
+                    <h3>Educação Ambiental</h3>
+                    <p>Palestras e oficinas sobre reciclagem e descarte correto.</p>
                 </div>
                 <div class="servico">
-                    <h3>Consultoria</h3>
-                    <p>Orientação estratégica para o seu negócio crescer.</p>
+                    <h3>Consultoria Sustentável</h3>
+                    <p>Orientação para empresas e condomínios sobre práticas ecológicas.</p>
                 </div>
             </div>
         </section>
@@ -98,6 +100,16 @@
                 <textarea id="mensagem" name="mensagem" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <div class="mapa-container">
+                <h3>Nos encontre aqui:</h3>
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-46.693419%2C-23.568704%2C-46.623421%2C-23.538704&amp;layer=mapnik"
+                    style="border:1px solid #ccc; width:100%; height:300px; border-radius:10px; margin-top:1rem;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
     </main>
     <footer>

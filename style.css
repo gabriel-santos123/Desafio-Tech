@@ -1,14 +1,18 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f7f7f7;
-    color: #222;
+    background: #f4fff4;
+    color: #234d20;
 }
 
 header {
-    background: #222;
-    color: #fff;
+    background: #e8f5e9;
+    color: #234d20;
     padding: 0.5rem 0;
+    /* Imagem de fundo será adicionada aqui futuramente */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #81c784;
 }
 
 nav {
@@ -20,9 +24,16 @@ nav {
     padding: 0 2rem;
 }
 
+.logo-header {
+    height: 120px;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
 nav h1 {
     font-size: 2rem;
     letter-spacing: 2px;
+    color: #388e3c;
 }
 
 nav ul {
@@ -34,18 +45,18 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: #388e3c;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #00bcd4;
+    color: #1b5e20;
 }
 
 .hero {
-    background: linear-gradient(120deg, #00bcd4 0%, #2196f3 100%);
+    background: linear-gradient(120deg, #a8e063 0%, #56ab2f 100%);
     color: #fff;
     padding: 4rem 0 3rem 0;
     text-align: center;
@@ -54,6 +65,7 @@ nav a:hover {
 .hero-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .hero-content .btn {
@@ -61,16 +73,28 @@ nav a:hover {
     margin-top: 1.5rem;
     padding: 0.75rem 2rem;
     background: #fff;
-    color: #2196f3;
+    color: #388e3c;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.2s, color 0.2s;
+    border: 2px solid #388e3c;
 }
 
 .hero-content .btn:hover {
-    background: #2196f3;
+    background: #388e3c;
     color: #fff;
+}
+
+.espaco-gif {
+    width: 100vw;
+    min-height: 60vh;
+    background: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    /* Espaço reservado para GIF */
 }
 
 main {
@@ -78,7 +102,7 @@ main {
     margin: 0 auto;
     padding: 2rem;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(34,77,32,0.04);
 }
 
 section {
@@ -93,10 +117,11 @@ section {
 
 .servico {
     flex: 1 1 250px;
-    background: #f0f8ff;
+    background: #f0fff0;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px rgba(56,139,60,0.08);
+    border-left: 5px solid #81c784;
 }
 
 .portfolio-galeria {
@@ -106,12 +131,12 @@ section {
 }
 
 .portfolio-galeria figure {
-    background: #f0f0f0;
+    background: #e8f5e9;
     border-radius: 8px;
     overflow: hidden;
     width: 200px;
     text-align: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px rgba(56,139,60,0.08);
 }
 
 .portfolio-galeria img {
@@ -128,13 +153,15 @@ form {
 
 input, textarea {
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #81c784;
     border-radius: 6px;
     font-size: 1rem;
+    background: #f4fff4;
+    color: #234d20;
 }
 
 button[type="submit"] {
-    background: #00bcd4;
+    background: #388e3c;
     color: #fff;
     border: none;
     padding: 0.75rem;
@@ -146,14 +173,15 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: #2196f3;
+    background: #234d20;
 }
 
 footer {
-    background: #222;
-    color: #fff;
+    background: #e8f5e9;
+    color: #234d20;
     padding: 2rem 0 1rem 0;
     margin-top: 2rem;
+    border-top: 4px solid #81c784;
 }
 
 .footer-content {
@@ -173,14 +201,24 @@ footer {
 }
 
 .footer-content .social a {
-    color: #00bcd4;
+    color: #388e3c;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
 
 .footer-content .social a:hover {
-    color: #fff;
+    color: #234d20;
+}
+
+.mapa-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+.mapa-container iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(56,139,60,0.08);
 }
 
 @media (max-width: 800px) {
@@ -191,5 +229,11 @@ footer {
     .servicos-lista, .portfolio-galeria {
         flex-direction: column;
         align-items: center;
+    }
+    .logo-header {
+        height: 70px;
+    }
+    .espaco-gif {
+        min-height: 30vh;
     }
 }
