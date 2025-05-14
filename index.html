@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>REset</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let nome = localStorage.getItem('nomeUsuario');
+            if (!nome) {
+                nome = prompt("Qual seu nome?");
+                if (nome) {
+                    localStorage.setItem('nomeUsuario', nome);
+                } else {
+                    nome = "Visitante";
+                }
+            }
+            const titulo = document.getElementById("titulo-bemvindo");
+            if (titulo) {
+                titulo.textContent = `Seja bem-vindo, ${nome}!!`;
+            }
+        });
+    </script>
 </head>
 <body>
-    oi
+    <header>
+        <nav>
+            <h1>REset</h1>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 id="titulo-bemvindo">Bem-vindo ao Meu Site Incrível!</h2>
+                <p>Transformando ideias em soluções digitais.</p>
+                <a href="#contato" class="btn">Fale Conosco</a>
+            </div>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma equipe apaixonada por tecnologia, focada em entregar resultados de alto impacto para nossos clientes.</p>
+            <ul>
+                <li>Missão: Inovar sempre</li>
+                <li>Visão: Ser referência no mercado</li>
+                <li>Valores: Ética, compromisso e criatividade</li>
+            </ul>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <div class="servicos-lista">
+                <div class="servico">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites modernos, responsivos e otimizados para SEO.</p>
+                </div>
+                <div class="servico">
+                    <h3>Design UI/UX</h3>
+                    <p>Experiências digitais intuitivas e atraentes.</p>
+                </div>
+                <div class="servico">
+                    <h3>Consultoria</h3>
+                    <p>Orientação estratégica para o seu negócio crescer.</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="portfolio-galeria">
+                <figure>
+                    <img src="https://via.placeholder.com/200x120" alt="Projeto 1">
+                    <figcaption>Projeto 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://via.placeholder.com/200x120" alt="Projeto 2">
+                    <figcaption>Projeto 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://via.placeholder.com/200x120" alt="Projeto 3">
+                    <figcaption>Projeto 3</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+            <ul class="social">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
