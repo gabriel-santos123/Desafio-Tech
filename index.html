@@ -231,5 +231,29 @@
             </ul>
         </div>
     </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const nome = this.nome.value;
+        const email = this.email.value;
+        const mensagem = this.mensagem.value;
+
+        const response = await fetch('/api/send-message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, email, mensagem }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            alert('Mensagem enviada com sucesso!');
+            this.reset();
+        } else {
+            alert('Erro ao enviar. Tente novamente.');
+        }
+    });
+    </script>
+
 </body>
 </html>
