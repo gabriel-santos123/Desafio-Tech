@@ -1,3 +1,4 @@
+//adiciona p axios e dotenv que são necessários para enviar a mensagem e para ler as variáveis de ambiente
 const axios = require('axios');
 require('dotenv').config({ path: './bot.env' });
 
@@ -6,6 +7,7 @@ async function sendMessageHandler(req, res) {
         return res.status(405).json({ message: 'Método não permitido' });
     }
 
+        //Busca os dados em outros arquivos
     const { nome, email, mensagem } = req.body;
     const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
