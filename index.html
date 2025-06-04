@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" type="image/png" href="img/RE.png">
     <link rel="stylesheet" href="style.css">
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             let nome = localStorage.getItem('nomeUsuario');
             if (!nome) {
                 nome = prompt("Qual seu nome?");
@@ -24,23 +25,24 @@
         });
     </script>
 </head>
+
 <body>
-   <header>
-    <nav>
-        <img src="RE.png" alt="Logo REset" class="logo-header">
-        <div class="nav-titulo-area">
-            <h1>REset</h1>
-        </div>
-    </nav>
-    <div class="header-gif-bg"></div>
-</header>
-<ul class="menu-links">
-    <li><a href="#home">Início</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#portfolio">Portfólio</a></li>
-    <li><a href="#contato">Contato</a></li>
-</ul>
+    <header>
+        <nav>
+            <img src="RE.png" alt="Logo REset" class="logo-header">
+            <div class="nav-titulo-area">
+                <h1>REset</h1>
+            </div>
+        </nav>
+        <div class="header-gif-bg"></div>
+    </header>
+    <ul class="menu-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
@@ -54,34 +56,53 @@
             <div class="materiais-box">
                 <h2>Materiais para reciclar</h2>
                 <div class="materiais-colunas">
-                    <!-- Exemplo de um item -->
                     <div class="material-item">
-                        <span class="bola azul">
-                            <svg class="icone-reciclagem" viewBox="0 0 24 24" fill="none">
-                                <path d="M7.5 8L4 14H9L7.5 8Z" fill="#fff"/>
-                                <path d="M16.5 8L20 14H15L16.5 8Z" fill="#fff"/>
-                                <path d="M12 2L13.5 6H10.5L12 2Z" fill="#fff"/>
-                                <path d="M4 14C4 17.3137 7.13401 20 12 20C16.866 20 20 17.3137 20 14" stroke="#fff" stroke-width="2" fill="none"/>
-                                <path d="M12 20V22" stroke="#fff" stroke-width="2"/>
-                            </svg>
-                        </span>
+                        <a href="https://www.google.com/maps/search/reciclagem+papel+Paraná" target="_blank" title="Ver locais de reciclagem de papel no Paraná">
+                            <span class="bola azul">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
                         <span class="material-nome">Papel</span>
                     </div>
                     <div class="material-item">
-                        <span class="bola vermelho"></span>
+                        <a href="https://www.google.com/maps/search/reciclagem+plástico+Paraná" target="_blank" title="Ver locais de reciclagem de plástico no Paraná">
+                            <span class="bola vermelho">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
                         <span class="material-nome">Plástico</span>
                     </div>
                     <div class="material-item">
-                        <span class="bola verde"></span>
+                        <a href="https://www.google.com/maps/search/reciclagem+vidro+Paraná" target="_blank" title="Ver locais de reciclagem de vidro no Paraná">
+                            <span class="bola verde">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
                         <span class="material-nome">Vidro</span>
                     </div>
                     <div class="material-item">
-                        <span class="bola amarelo"></span>
+                        <a href="https://www.google.com/maps/search/reciclagem+metal+Paraná" target="_blank" title="Ver locais de reciclagem de metal no Paraná">
+                            <span class="bola amarelo">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
                         <span class="material-nome">Metal</span>
                     </div>
                     <div class="material-item">
-                        <span class="bola marrom"></span>
+                        <a href="https://www.google.com/maps/search/reciclagem+orgânico+Paraná" target="_blank" title="Ver locais de reciclagem de orgânico no Paraná">
+                            <span class="bola marrom">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
                         <span class="material-nome">Orgânico</span>
+                    </div>
+                    <div class="material-item">
+                        <a href="https://www.google.com/maps/search/reciclagem+hospitalar+Paraná" target="_blank" title="Ver locais de descarte hospitalar no Paraná">
+                            <span class="bola preto">
+                                <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
+                            </span>
+                        </a>
+                        <span class="material-nome">Hospitalar</span>
                     </div>
                 </div>
             </div>
@@ -89,7 +110,8 @@
 
         <section id="sobre">
             <h2>Sobre Nós</h2>
-            <p>Somos uma equipe dedicada à reciclagem e ao descarte correto do lixo, promovendo sustentabilidade e consciência ambiental.</p>
+            <p>Somos uma equipe dedicada à reciclagem e ao descarte correto do lixo, promovendo sustentabilidade e
+                consciência ambiental.</p>
             <ul>
                 <li>Missão: Inovar sempre em prol do meio ambiente</li>
                 <li>Visão: Ser referência em reciclagem e sustentabilidade</li>
@@ -132,20 +154,18 @@
         </section>
         <section id="contato">
             <h2>Contato</h2>
-                <form id="contactForm">
-                    <input type="text" name="nome" placeholder="Seu nome" required />
-                    <input type="email" name="email" placeholder="Seu email" required />
-                    <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
+            <form id="contactForm">
+                <input type="text" name="nome" placeholder="Seu nome" required />
+                <input type="email" name="email" placeholder="Seu email" required />
+                <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
             <div class="mapa-container">
                 <h3>Nos encontre aqui:</h3>
                 <iframe
                     src="https://www.openstreetmap.org/export/embed.html?bbox=-46.693419%2C-23.568704%2C-46.623421%2C-23.538704&amp;layer=mapnik"
                     style="border:1px solid #ccc; width:100%; height:300px; border-radius:10px; margin-top:1rem;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </section>
@@ -161,40 +181,41 @@
         </div>
     </footer>
 
-<!-- ... restante do conteúdo do site ... -->
+    <!-- ... restante do conteúdo do site ... -->
 
-<script>
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
 
-    const form = e.target;
-    const data = {
-        nome: form.nome.value,
-        email: form.email.value,
-        mensagem: form.mensagem.value
-    };
+            const form = e.target;
+            const data = {
+                nome: form.nome.value,
+                email: form.email.value,
+                mensagem: form.mensagem.value
+            };
 
-    try {
-        const response = await fetch('/api/sendMessage', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            try {
+                const response = await fetch('/api/sendMessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    alert('Mensagem enviada com sucesso!');
+                    form.reset();
+                } else {
+                    alert(result.error || 'Erro ao enviar mensagem.');
+                }
+            } catch (err) {
+                alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+            }
         });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-            alert('Mensagem enviada com sucesso!');
-            form.reset();
-        } else {
-            alert(result.error || 'Erro ao enviar mensagem.');
-        }
-    } catch (err) {
-        alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
-    }
-});
-</script>
+    </script>
 </body>
+
 </html>
