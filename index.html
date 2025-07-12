@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const agora = Date.now();
             let nome = localStorage.getItem('nomeUsuario');
-            if (!nome) {
+            let expira = localStorage.getItem('expiraUsuario');
+
+            if (!nome || !expira || agora > Number(expira)) {
                 nome = prompt("Qual seu nome?");
                 if (nome) {
                     localStorage.setItem('nomeUsuario', nome);
+                    localStorage.setItem('expiraUsuario', agora + 5 * 60 * 1000);
                 } else {
                     nome = "Visitante";
                 }
             }
+
             const titulo = document.getElementById("titulo-bemvindo");
             if (titulo) {
                 titulo.textContent = `Seja bem-vindo, ${nome}!!`;
@@ -40,7 +45,7 @@
         <li><a href="#home">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#contato">Contato</a></li>
     </ul>
     <main>
@@ -106,7 +111,7 @@
                             </span>
                         </a>
                         <span class="material-nome">Hospitalar</span>
-                            <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
+                        <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
                             O lixo hospitalar deve ser descartado em hospitais ou postos de saúde, seguindo normas específicas de segurança.
                         </p>
                     </div>
@@ -141,22 +146,17 @@
                 </div>
             </div>
         </section>
-        <section id="portfolio">
-            <h2>Portfólio</h2>
-            <div class="portfolio-galeria">
-                <figure>
-                    <img src="https://via.placeholder.com/200x120" alt="Projeto 1">
-                    <figcaption>Projeto 1</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://via.placeholder.com/200x120" alt="Projeto 2">
-                    <figcaption>Projeto 2</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://via.placeholder.com/200x120" alt="Projeto 3">
-                    <figcaption>Projeto 3</figcaption>
-                </figure>
-            </div>
+        <section id="beneficios">
+            <h2>Benefícios da Reciclagem</h2>
+            <ul class="beneficios-reciclagem">
+                <li>Reduz a quantidade de lixo nos aterros sanitários.</li>
+                <li>Economiza recursos naturais, como água e energia.</li>
+                <li>Diminui a poluição do solo, da água e do ar.</li>
+                <li>Gera empregos e renda para muitas famílias.</li>
+                <li>Contribui para a preservação do meio ambiente.</li>
+                <li>Ajuda a combater as mudanças climáticas.</li>
+                <li>Promove a educação ambiental e a conscientização social.</li>
+            </ul>
         </section>
         <section id="contato">
             <h2>Contato</h2>
@@ -187,10 +187,7 @@
         </div>
     </footer>
 
-    <!-- ... restante do conteúdo do site ... -->
-
     <script>
-        // Rolagem suave para os links do menu
         document.querySelectorAll('.menu-links a[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
