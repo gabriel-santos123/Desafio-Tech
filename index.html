@@ -15,11 +15,12 @@
 
             if (!nome || !expira || agora > Number(expira)) {
                 nome = prompt("Qual seu nome?");
-                if (nome) {
+                if (nome && nome.trim() !== "") {
                     localStorage.setItem('nomeUsuario', nome);
                     localStorage.setItem('expiraUsuario', agora + 5 * 60 * 1000);
                 } else {
                     nome = "Visitante";
+                    // Não salva "Visitante" no localStorage!
                 }
             }
 
@@ -178,7 +179,7 @@
     </main>
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+            <p>&copy; 2025 REset. Todos os direitos reservados.</p>
             <ul class="social">
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">LinkedIn</a></li>
