@@ -53,7 +53,7 @@
             <div class="hero-content">
                 <h2 id="titulo-bemvindo">Bem-vindo ao Meu Site Incrível!</h2>
                 <p>Transformando ideias em soluções digitais.</p>
-                <a href="#contato" class="btn">Fale Conosco</a>
+                <!-- <a href="#contato" class="btn">Fale Conosco</a> -->
             </div>
         </section>
 
@@ -62,7 +62,7 @@
                 <h2>Materiais para reciclar</h2>
                 <div class="materiais-colunas">
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+papel+Paraná" target="_blank" title="Ver locais de reciclagem de papel no Paraná">
+                        <a href="#" id="btn-papel" title="Como reciclar papel">
                             <span class="bola azul">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
@@ -70,7 +70,7 @@
                         <span class="material-nome">Papel</span>
                     </div>
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+plástico+Paraná" target="_blank" title="Ver locais de reciclagem de plástico no Paraná">
+                        <a href="#" id="btn-plastico" title="Como reciclar plástico">
                             <span class="bola vermelho">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
@@ -78,7 +78,7 @@
                         <span class="material-nome">Plástico</span>
                     </div>
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+vidro+Paraná" target="_blank" title="Ver locais de reciclagem de vidro no Paraná">
+                        <a href="#" id="btn-vidro" title="Como reciclar vidro">
                             <span class="bola verde">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
@@ -86,7 +86,7 @@
                         <span class="material-nome">Vidro</span>
                     </div>
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+metal+Paraná" target="_blank" title="Ver locais de reciclagem de metal no Paraná">
+                        <a href="#" id="btn-metal" title="Como reciclar metal">
                             <span class="bola amarelo">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
@@ -94,26 +94,26 @@
                         <span class="material-nome">Metal</span>
                     </div>
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+orgânico+Paraná" target="_blank" title="Ver locais de reciclagem de orgânico no Paraná">
+                        <a href="#" id="btn-organico" title="Como reciclar orgânico">
                             <span class="bola marrom">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
                         </a>
                         <span class="material-nome">Orgânico</span>
-                        <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
+                        <!-- <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
                             O lixo orgânico pode ser descartado em composteiras ou próximo a árvores, pois pode servir como adubo natural.
-                        </p>
+                        </p> -->
                     </div>
                     <div class="material-item">
-                        <a href="https://www.google.com/maps/search/reciclagem+hospitalar+Paraná" target="_blank" title="Ver locais de descarte hospitalar no Paraná">
+                        <a href="#" id="btn-hospitalar" title="Como reciclar hospitalar">
                             <span class="bola preto">
                                 <img src="img/reciclagem.png" alt="Reciclagem" class="icone-reciclagem">
                             </span>
                         </a>
                         <span class="material-nome">Hospitalar</span>
-                        <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
+                        <!-- <p class="material-info" style="font-size: 0.95em; color: #444; margin-top: 0.3em;">
                             O lixo hospitalar deve ser descartado em hospitais ou postos de saúde, seguindo normas específicas de segurança.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -166,14 +166,14 @@
                 <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
-            <div class="mapa-container">
+            <!-- <div class="mapa-container">
                 <h3>Nos encontre aqui:</h3>
                 <iframe
                     src="https://www.openstreetmap.org/export/embed.html?bbox=-46.693419%2C-23.568704%2C-46.623421%2C-23.538704&amp;layer=mapnik"
                     style="border:1px solid #ccc; width:100%; height:300px; border-radius:10px; margin-top:1rem;"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer>
@@ -186,6 +186,14 @@
             </ul>
         </div>
     </footer>
+
+    <!-- Modal fora do vídeo -->
+    <div id="modal-video" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+        <button id="close-modal" style="position:fixed; top:30px; right:30px; font-size:2em; background:none; border:none; color:#fff; cursor:pointer; z-index:10000;">&times;</button>
+        <div style="background:#fff; padding:20px; border-radius:10px; max-width:90vw; max-height:90vh;">
+            <iframe id="yt-video" width="560" height="315" src="" title="YouTube video" frameborder="0" allowfullscreen style="max-width:100%; max-height:70vh;"></iframe>
+        </div>
+    </div>
 
     <script>
         document.querySelectorAll('.menu-links a[href^="#"]').forEach(link => {
@@ -227,6 +235,50 @@
                 }
             } catch (err) {
                 alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+            }
+        });
+
+        // IDs dos botões e vídeos correspondentes
+        const videos = {
+            'btn-papel':      'https://www.youtube.com/embed/nUWbDa-y_JA',
+            'btn-plastico':   'https://www.youtube.com/embed/qJwSLrcLPvw', // vídeo correto do plástico
+            'btn-vidro':      'https://www.youtube.com/embed/1bQ4vQwQvQw',
+            'btn-metal':      'https://www.youtube.com/embed/2bQ4vQwQvQw',
+            'btn-organico':   'https://www.youtube.com/embed/3bQ4vQwQvQw',
+            'btn-hospitalar': 'https://www.youtube.com/embed/4bQ4vQwQvQw'
+        };
+
+        const modalVideo = document.getElementById('modal-video');
+        const closeModal = document.getElementById('close-modal');
+        const ytVideo = document.getElementById('yt-video');
+
+        Object.keys(videos).forEach(function(btnId) {
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    ytVideo.src = videos[btnId];
+                    modalVideo.style.display = "flex";
+                });
+            }
+        });
+
+        closeModal.addEventListener('click', function() {
+            modalVideo.style.display = "none";
+            ytVideo.src = "";
+        });
+
+        modalVideo.addEventListener('click', function(e) {
+            if (e.target === modalVideo) {
+                modalVideo.style.display = "none";
+                ytVideo.src = "";
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (modalVideo.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) {
+                modalVideo.style.display = "none";
+                ytVideo.src = "";
             }
         });
     </script>
