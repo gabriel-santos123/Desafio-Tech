@@ -434,3 +434,45 @@ th {
     background: #e8f5e9;
     color: #234d20;
 }
+
+/* Estilos exclusivos para servicos.html */
+body.servicos-page {
+    background-color: #e6f5ea;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.container h1 {
+    text-align: center;
+    color: #247b4d;
+}
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    font-size: 50px;
+    text-align: center;
+    color: #2b7a4b;
+}
+
+/* Estilos exclusivos para sobrenos.html */
+body.sobrenos-page {
+    background: #f0f4f7;
+}
+.container {
+    max-
